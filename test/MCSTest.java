@@ -13,4 +13,9 @@ class MCSTest {
     void testQuadratic() {
         assertEquals(20,MCS.maxSubsequenceSum_quadratic(sample));
     }
+
+    @Test
+    void testLinear() {
+        assertEquals(20,MCS.maxSubsequenceSum_linear(sample));
+    }
 }

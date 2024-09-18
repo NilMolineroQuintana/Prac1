@@ -1,5 +1,18 @@
 public class MCS {
 
+    public static int maxSubsequenceSum_linear (int[] a)
+    {
+        int maxSum = 0;
+        int thisSum;
+        int seqStart = 0;
+        int seqEnd = 0;
+        int numIte = 0;
+        for (int i = 0; i < a.length; i++)
+        {
+            numIte++;
+        }
+        return 0;
+    }
     public static int maxSubsequenceSum_quadratic (int[] a){
         int maxSum = 0;
         int thisSum;
