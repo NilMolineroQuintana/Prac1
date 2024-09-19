@@ -2,7 +2,7 @@ public class MCS {
 
     public static int maxSubsequenceSum_linear (int[] a)
     {
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;
         int thisSum = 0;
         int seqStart = 0;
         int seqEnd = 0;
@@ -24,7 +24,7 @@ public class MCS {
                 i = j + 1;
             }
         }
-        System.out.println("Solucion de orden lineal");
+        System.out.println("Solucion de orden linear");
         System.out.println("Maximo: " + maxSum);
         System.out.println("Inicio: " + seqStart + " Final: " + seqEnd);
         System.out.println("Numero de iteraciones: " + numIte);
