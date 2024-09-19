@@ -7,35 +7,24 @@ public class MCS {
         int seqStart = 0;
         int seqEnd = 0;
         int numIte = 0;
-        int i = 0, j = 0;
-        boolean finished = false;
-        while (!finished)
+        int i = 0;
+        for (int j = i; j < a.length; j++)
         {
             numIte++;
-            if (j < a.length)
+            thisSum += a[j];
+            if (thisSum > maxSum)
             {
-                thisSum += a[j];
-                if (thisSum > maxSum)
-                {
-                    maxSum = thisSum;
-                    seqStart = i;
-                    seqEnd = j;
-                }
-                j++;
-            }
-            else
-            {
-                thisSum = 0;
-                i++;
-                j = i;
+                maxSum = thisSum;
+                seqStart = i;
+                seqEnd = j;
             }
 
-            if (i >= a.length)
-            {
-                finished = true;
+            if (thisSum < 0) {
+                thisSum = 0;
+                i = j + 1;
             }
         }
-        System.out.println("Solucion de orden linear");
+        System.out.println("Solucion de orden lineal");
         System.out.println("Maximo: " + maxSum);
         System.out.println("Inicio: " + seqStart + " Final: " + seqEnd);
         System.out.println("Numero de iteraciones: " + numIte);
